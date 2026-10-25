@@ -6,4 +6,6 @@ public class Irimie_Mara_Lab2Context(DbContextOptions<Irimie_Mara_Lab2Context> o
     public DbSet<Irimie_Mara_Lab2.Models.Publisher> Publisher { get; set; } = default!;
 
     public DbSet<Irimie_Mara_Lab2.Models.Author> Author { get; set; } = default!;
+
+    public DbSet<Irimie_Mara_Lab2.Models.Category> Category { get; set; } = default!;
 }

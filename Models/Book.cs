@@ -22,5 +22,7 @@ namespace Irimie_Mara_Lab2.Models
         public int? PublisherID { get; set; }
 
         public Publisher? Publisher { get; set; }  // navitagion property
+
+        public ICollection<BookCategory> BookCategories { get; set; }  
     }
 }
