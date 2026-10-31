@@ -35,7 +35,7 @@ public class EditModel : BookCategoriesPageModel
         {
             return NotFound();
         }
-
+        Book = book;
         // apelam PopulateAssignedCategoryData pt a obtine informatiile necesare checkbox-urilor folosind clasa AssignedCategoryData
 
         PopulateAssignedCategoryData(_context, book);
@@ -47,7 +47,7 @@ public class EditModel : BookCategoriesPageModel
         });
 
         ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
-        ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID", "LastName");
+        ViewData["AuthorID"] = new SelectList(authorList, "ID", "FullName");
         return Page();
     }
 
