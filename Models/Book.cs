@@ -23,6 +23,7 @@ namespace Irimie_Mara_Lab2.Models
 
         public Publisher? Publisher { get; set; }  // navitagion property
 
+        public ICollection<Borrowing>? Borrowings { get; set; }  // navitagion property
         public ICollection<BookCategory> BookCategories { get; set; }  
     }
 }
